@@ -72,3 +72,18 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
+
+//video 18 code challenge
+
+/*Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
+Your tasks:
+1. Printaniceoutputtotheconsole,sayingwhohasthehigherBMI.Themessage is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. UseatemplateliteraltoincludetheBMIvaluesintheoutputs.Example:"Mark's BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement 😉 GOOD LUCK 😀*/
+
+if (markHigherBMI){
+    console.log(`Mark's BMI ${markBMI} is higher tan John's BMI ${johnBMI}`);
+} else {
+    console.log(`John's BMI ${johnBMI} is higher than Mark's BMI ${markBMI}`);
+}
+
