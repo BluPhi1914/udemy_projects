@@ -33,12 +33,42 @@ const johnMass = 92;
 const markHeight = 1.69;
 const johnHeight = 1.95;
 
+const markMass1 = 95;
+const johnMass1 = 85;
+const markHeight1 = 1.88;
+const johnHeight1 = 1.76;
+
 const markBMI = markMass / markHeight ** 2;
 const johnBMI = johnMass / johnHeight ** 2;
+
+const markBMI1 = markMass1 / markHeight1 ** 2;
+const johnBMI2 = johnMass1 / johnHeight1 ** 2;
 
 console.log(markBMI, johnBMI);
 const markHigherBMI = markBMI >= johnBMI;
 
+console.log(markBMI1, johnBMI2);
+const markHigherBMI1 = markBMI1>= johnBMI2;
 
+//video 17 if-else statements
+const age = 19;
+const isOldEnough = age >=18;
 
+if(isOldEnough) {
+    console.log('Sarah can start her driving license');
+}
+ else{
+     const yearsLeft = 18- age;
+     console.log('Sarah cannot start her driving license');
+ } //known as an if-else control structure
 
+const birthYear = 1991;
+if (birthYear <= 2000) {
+    century = 20;
+    console.log(`Your birth year is the 20th century`);
+} else {
+    century = 21;
+    console.log( `Your birth year is the 21st century`);
+}
+
+console.log(century);
