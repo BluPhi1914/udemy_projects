@@ -148,6 +148,113 @@ else if (favorite === 7 ){
 
 if (favorite !== 23) console.log ("why not 23?"); //introduction of the not operator. '!==' is the strict version '!=' loose version
 
+//Boolean logic. 'And', 'Or', and 'Not' operators
+//video 24 Logic operators
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriversLicense && hasGoodVision); //combines two variables using && operators
+console.log(hasDriversLicense || hasGoodVision); //uses the OR operator to check if one is true
+console.log(!hasDriversLicense); //NOT operator changes true to false
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if(shouldDrive) {
+    console.log("Sarah is able to drive")
+} else {
+    console.log ("someone else should drive")
+} //will come back true because both are true statements. If one was false, then it would return the else statement
+
+const isTired = true;
+console.log(hasDriversLicense || hasGoodVision || isTired); 
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log ("Sarah can drive")
+} else {
+    console.log ("Sarah should not drive")
+} //would return else statement because Sarah is tired.. if her statement was put in a false at the beginnning then it would return her as true.
+
+//CODE CHALLENGE 3 video 25
+/*
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score) 
+3. Bonus1:Include a requirement for a minimum score of 100 .With this rule , a
+team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉
+4. Bonus2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123 
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+GOOD LUCK 😀 */
+
+const dolphinScore1 = 96;
+const dolphinScore2 = 108;
+const dolphinScore3 = 89;
+const koalaScore1 = 88;
+const koalaScore2 = 91;
+const koalaScore3 = 110;
+
+//challenge 1
+const dolphinAverage = (dolphinScore1 + dolphinScore2 + dolphinScore3) / 3;
+const koalaAverage = (koalaScore1 + koalaScore2 + koalaScore3) / 3;
+//Challenge 2
+if (dolphinAverage > koalaAverage) {
+    console.log("Dolphins win the cup!")
+} else if (dolphinAverage === koalaAverage) {
+    console.log("Both teams are tied")
+} else {
+    console.log('Koalas win the cup')
+}
+
+//bonus challenge 1 including a requirement to have minimum score of 100 and more than the other team 
+const dolphinScoreBonus1 = 97;
+const dolphinScoreBonus2 = 112;
+const dolphinScoreBonus3 = 101;
+
+const koalaScoreBonus1 = 109;
+const koalaScoreBonus2 = 95;
+const koalaScoreBonus3 = 123;
+
+const dolphinAverageBonus = (dolphinScoreBonus1 + dolphinScoreBonus2 + dolphinScoreBonus3) / 3;
+const koalaAverageBonus = (koalaScoreBonus1 + koalaScoreBonus2 + koalaScoreBonus3) / 3;
+
+if (dolphinAverageBonus >= koalaAverageBonus && dolphinAverageBonus >= 100) {
+    console.log("Dolphins win the cup")
+} else if (dolphinAverageBonus <= koalaAverageBonus && koalaAverageBonus >= 100) {
+    console.log("Koals win the cup")
+} else {
+    console.log("Neither team wins the cup")
+}
+
+//bonus challenge 2 include a requirement for both teams to have >100 and be equal for it to be a draw. Or neither teamwins
+//§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+const dolphinScoreBonus4 = 97;
+const dolphinScoreBonus5 = 112;
+const dolphinScoreBonus6 = 101;
+
+const koalaScoreBonus4 = 109;
+const koalaScoreBonus5 = 95;
+const koalaScoreBonus6 = 123;
+
+const dolphinAverageBonus1 = (dolphinScoreBonus4 + dolphinScoreBonus5 + dolphinScoreBonus6) / 3;
+const koalaAverageBonus1 = (koalaScoreBonus4 + koalaScoreBonus5 + koalaScoreBonus6) / 3;
+
+if (dolphinAverageBonus1 >= koalaAverageBonus1 && dolphinAverageBonus1 >= 100 && koalaAverageBonus1 >=100) {
+    console.log("Dolphins win the cup")
+} else if (dolphinAverageBonus1 <= koalaAverageBonus1 && dolphinAverageBonus1 >= 100 && koalaAverageBonus1 >= 100) {
+    console.log("Koals win the cup")
+} else if(koalaAverageBonus1 === dolphinAverageBonus1 && dolphinAverageBonus1 >= 100 && koalaAverageBonus1 >= 100) {
+    console.log("Both teams tied")
+} else {
+    console.log("Neither team wins the cup")
+
+
+
+
 
 
 
