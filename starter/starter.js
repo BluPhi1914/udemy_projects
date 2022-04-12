@@ -252,9 +252,88 @@ if (dolphinAverageBonus1 >= koalaAverageBonus1 && dolphinAverageBonus1 >= 100 &&
 } else {
     console.log("Neither team wins the cup")
 
+//video 26 Switch Statements
 
+const day = 'monday';
 
+switch(day) {
+    case'monday': // day === monday. if true, then console will log statements
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Make videos');
+        break;
+    case 'wednesday':
+    case 'thursday' :
+        console.log('Write code');
+        break;
+    case 'friday':
+        console.log('record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('enjoy weekend');
+        break;
+    default:
+        console.log('Not a valid day');
+}
 
+//my try for his impromptu challenge
+if (day == 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if(day === 'tuesday') {
+    console.log('Make videos'); 
+} else if( day === 'wednesday' || day === 'thursday') {
+    console.log('Write code'); 
+} else if( day === 'friday') {
+    console.log('record videos');
+} else if( day=== 'saturday' || day === 'sunday') {
+    console.log('enjoy weekend')
+} else {
+    console.log('not a valid day')
+}
+
+//video's answer to impromptu code challenge
+if ( day === 'monday') {
+    console.log('plan course structure');
+} else if(day ==='tuesday') {
+    console.log('')
+}
+//I was right!!! Switch statements reduce the amount of repetitiveness and is easier to read when utilized
+
+//video 27 Statements and Expressions
+//expressions are codes that produce numerical values
+//video 28 the conditional (ternary) operator
+
+const age1 = 23;
+age1 >= 18 ? console.log('I like to drink wine') : console.log('Water for me please');
+//easier way to write this statement
+const drink = age1 >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+console.log(`I would like to drink ${ age1 = 18 ? 'wine' : 'water'}`); //we can use a conditional as a template literal to fill in the statement based on the truthy/falsy statemnt\
+//not a replacement for if/else statements. only used if there is a quick decision for the statement
+
+//Code Challenge #4 video 29
+
+/*Coding Challenge #4
+Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, andt he final value (bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value 316.25”
+Test data:
+§ Data 1: Test for bill values 275, 40 and 430 Hints:
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2 § Value X is between 50 and 300, if it's>= 50 && <= 300😉
+GOOD LUCK 😀*/
+
+const meal = 275 ;
+const tip = meal <= 300 && meal >= 50 ? (meal * .15) : (meal * .20);
+ console.log(
+     `Your meal cost ${meal}, the tip is then ${tip}, so your bill comes out to${bill + tip}`
+ )
+// I had everything correct except adding the const meal to the ternary operator in the conditions
 
 
 
